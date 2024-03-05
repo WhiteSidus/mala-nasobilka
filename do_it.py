@@ -1,21 +1,34 @@
 import random
 
+
+body = 0
+
 def nasobeni(a, b):
     vysledek = a * b
     return vysledek
 
 def kontrola(vysledek, vysledek_zak):
-    body = False
-    if vysledek != vysledek_zak:
+    if vysledek == vysledek_zak:
         print("Jsi šikulka")
-        body = True
+        body =+1
+        print(body)
     else:
-        print("Jejda, spletl jsi se odpoved' :(")
+        print("Jejda, spletl jsi se odpovedí :(")
+        body =-1
+        print(body)
     return body
 
-x = random.randint(1,10)
-y = random.randint(1,10)
 
-volba = input(f"{x} + {y} = ")
-print(x)
-print(y)
+for i in range(9):
+
+    x = random.randint(1,10)
+    y = random.randint(1,10)
+    vysledek_zak = int(input(f"{x} * {y} = "))
+
+    vysledek = nasobeni(x,y)
+    kontrola(vysledek,vysledek_zak)
+
+print("Koneční body ", body)
+
+
+
