@@ -1,6 +1,5 @@
 import random
 
-
 body = 0
 
 def nasobeni(a, b):
@@ -8,16 +7,16 @@ def nasobeni(a, b):
     return vysledek
 
 def kontrola(vysledek, vysledek_zak):
+    global body
     if vysledek == vysledek_zak:
-        print("Jsi šikulka")
-        body =+1
+        print("Jsi šikulka :)")
+        body += 1
         print(body)
     else:
         print("Jejda, spletl jsi se odpovedí :(")
-        body =-1
-        print(body)
+        body -= 1
+        print (body)
     return body
-
 
 for i in range(9):
 
@@ -29,6 +28,3 @@ for i in range(9):
     kontrola(vysledek,vysledek_zak)
 
 print("Koneční body ", body)
-
-
-
