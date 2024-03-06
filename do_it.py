@@ -18,7 +18,7 @@ def kontrola(vysledek, vysledek_zak):
         print (body)
     return body
 
-for i in range(9):
+for i in range(10):
 
     x = random.randint(1,10)
     y = random.randint(1,10)
